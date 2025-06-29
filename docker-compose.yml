@@ -7,20 +7,16 @@ services:
     ports:
       - 25565:25565
     environment:
-      # MODPACK_PLATFORM: AUTO_CURSEFORGE
       TYPE: AUTO_CURSEFORGE
-      CF_API_KEY: '$2a$10$qnrppGeiuiybVcBBs0uiy.Qev2QtZYC6zIfP0PLSj1//YuNMjsmk2'
+      VERSION: 47.4.0
+      CF_API_KEY: ${API_KEY}
       CF_PAGE_URL: https://www.curseforge.com/minecraft/modpacks/beyond-depth/files/6584481
       EULA: "TRUE"
       MEMORY: 10G
       MAX_PLAYERS: 50
-      #REMOVE_OLD_MODS: "true"
+      CF_SERVER_MOD: forge-1.20.1-47.4.0-installer.jar
     tty: true
     stdin_open: true
     restart: unless-stopped
     volumes:
-      # attach the relative directory 'data' to the container's /data path
-      - ./data:/data
-
-volumes:
-  data:
+      - ./minecraft-data:/data
