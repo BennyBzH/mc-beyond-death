@@ -14,7 +14,7 @@ services:
       EULA: "TRUE"
       MEMORY: 10G
       MAX_PLAYERS: 50
-      REMOVE_OLD_MODS: "true"
+      #REMOVE_OLD_MODS: "true"
     tty: true
     stdin_open: true
     restart: unless-stopped
