@@ -13,7 +13,7 @@ services:
       MODS_FILE: /extras/mods.txt
       CF_SLUG: beyond-depth
       CF_FILE_ID: "6584481"
-      CF_API_KEY: "$2a$10$ZO0t2XdWGUrvNaO/vDH6we86H.ajJadvSyV2gntlyECUlleLxDRz6"
+      CF_API_KEY: $2a$10$ZO0t2XdWGUrvNaO/vDH6we86H.ajJadvSyV2gntlyECUlleLxDRz6
     tty: true
     stdin_open: true
     restart: unless-stopped
