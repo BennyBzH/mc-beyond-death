@@ -8,7 +8,8 @@ services:
       - 25565:25565
     environment:
       MODPACK_PLATFORM: AUTO_CURSEFORGE
-      CF_API_KEY: 5faa58c5-5132-487a-a048-8060cc3ea4cc
+      TYPE: AUTO_CURSEFORGE
+      CF_API_KEY: '$2a$10$KJpoLC4rPM.n5ZOPDYhRyuuvjd5gND7VSCxhnDRfODsqHZ54cNIN2'
       CF_PAGE_URL: https://www.curseforge.com/minecraft/modpacks/beyond-depth/files/6584481
       EULA: "TRUE"
       VERSION: 1.20.1
@@ -16,8 +17,6 @@ services:
     tty: true
     stdin_open: true
     restart: unless-stopped
-    volumes:
-      - ./minecraft-data:/data
 
 volumes:
   data:
