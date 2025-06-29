@@ -7,11 +7,12 @@ services:
     ports:
       - 25565:25565
     environment:
-      CF_API_KEY: $2a$10$KJpoLC4rPM.n5ZOPDYhRyuuvjd5gND7VSCxhnDRfODsqHZ54cNIN2
+      CF_API_KEY: 5faa58c5-5132-487a-a048-8060cc3ea4cc
       EULA: "TRUE"
       TYPE: AUTO_CURSEFORGE
       VERSION: 1.20.1
       CF_PAGE_URL: https://www.curseforge.com/minecraft/modpacks/beyond-depth/files/6584481
+      MEMORY: 10G
     tty: true
     stdin_open: true
     restart: unless-stopped
