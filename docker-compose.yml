@@ -19,16 +19,9 @@ services:
     tty: true
     stdin_open: true
     restart: unless-stopped
+    mem_limit: 13g
     volumes:
       - leserveurdemerdela:/data
-    deploy:
-      resources:
-        limits:
-          memory: 14G
-          cpus: 8
-        reservations:
-          memory: 10G
-          cpus: 4
 
 volumes:
   leserveurdemerdela:
