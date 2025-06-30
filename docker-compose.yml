@@ -1,6 +1,5 @@
 services:
   mc:
-    container_name: walkercraft
     image: itzg/minecraft-server
     ports:
       - 25565:25565
