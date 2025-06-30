@@ -16,9 +16,9 @@ services:
     stdin_open: true
     restart: unless-stopped
     volumes:
-      - mcdata:/data
+      - sdfgsddfgdfgsqdsgsd:/data
       - ./manifests:/manifests:ro
 
 
 volumes:
-  mcdata: {}
+  sdfgsddfgdfgsqdsgsd: {}
