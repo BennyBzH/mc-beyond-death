@@ -21,10 +21,10 @@ services:
     deploy:
       resources:
         limits:
-          cpus: 8
+          cpus: 4
           memory: 14G
         reservations:
-          cpus: 8
+          cpus: 4
           memory: 14G
 
 
