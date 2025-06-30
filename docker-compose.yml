@@ -8,10 +8,10 @@ services:
       CF_API_KEY: "$$2a$$10$$hSWAHjNzBDip2EocURcjxexTRw4LDNhw4Aec5lPHxfXQL342FONgm"
       CF_MODPACK_MANIFEST: /manifests/manifest.json
       CF_SLUG: "custom"
-      EULA: "TRUE"
+      EULA: TRUE
       MEMORY: 14G
       INIT_MEMORY: 14G
-      MAX_PLAYERS: 10
+      MAX_PLAYERS: 50
     tty: true
     stdin_open: true
     restart: unless-stopped
@@ -25,7 +25,7 @@ services:
           memory: 14G
         reservations:
           cpus: 4
-          memory: 14G
+          memory: 8G
 
 
 volumes:
