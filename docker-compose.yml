@@ -13,9 +13,9 @@ services:
       CF_FILE_ID: 6699121
       EULA: TRUE
       MEMORY: 14G
-      MAX_MEMORY: 15G
+      MAX_MEMORY: 14G
       INIT_MEMORY: 14G
-      MAX_PLAYERS: 50
+      MAX_PLAYERS: 10
       USE_MEOWICE_FLAGS: true
     tty: true
     stdin_open: true
@@ -25,7 +25,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 15G
+          memory: 14G
           cpus: 8
         reservations:
           memory: 10G
