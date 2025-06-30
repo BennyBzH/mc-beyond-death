@@ -4,10 +4,13 @@ services:
     ports:
       - 25565:25565
     environment:
-      MODPACK_PLATFORM: AUTO_CURSEFORGE
+      TYPE: AUTO_CURSEFORGE
       CF_API_KEY: "$$2a$$10$$hSWAHjNzBDip2EocURcjxexTRw4LDNhw4Aec5lPHxfXQL342FONgm"
-      CF_MODPACK_MANIFEST: /manifests/manifest.json
-      CF_SLUG: "custom"
+      # MODPACK_PLATFORM: AUTO_CURSEFORGE
+      # CF_MODPACK_MANIFEST: /manifests/manifest.json
+      # CF_SLUG: "custom"
+      CF_SLUG: beyond-depth
+      CF_FILE_ID: 6699121
       EULA: TRUE
       MEMORY: 14G
       INIT_MEMORY: 14G
@@ -17,7 +20,6 @@ services:
     restart: unless-stopped
     volumes:
       - leserveurdemerdela:/data
-      - ./manifests:/manifests:ro
 
 volumes:
   leserveurdemerdela:
