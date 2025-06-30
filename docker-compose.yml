@@ -14,7 +14,7 @@ services:
       EULA: TRUE
       MEMORY: 14G
       MAX_MEMORY: 14G
-      INIT_MEMORY: 14G
+      INIT_MEMORY: 8G
       MAX_PLAYERS: 10
       USE_MEOWICE_FLAGS: true
     tty: true
