@@ -13,13 +13,23 @@ services:
       CF_FILE_ID: 6699121
       EULA: TRUE
       MEMORY: 14G
+      MAX_MEMORY: 15G
       INIT_MEMORY: 14G
       MAX_PLAYERS: 50
+      USE_MEOWICE_FLAGS: true
     tty: true
     stdin_open: true
     restart: unless-stopped
     volumes:
       - leserveurdemerdela:/data
+    deploy:
+      resources:
+        limits:
+          memory: 15G
+          cpus: 8
+        reservations:
+          memory: 10G
+          cpus: 4
 
 volumes:
   leserveurdemerdela:
