@@ -12,10 +12,12 @@ services:
       CF_SLUG: beyond-depth
       CF_FILE_ID: 6699121
       EULA: TRUE
-      MAX_MEMORY: 13G
-      INIT_MEMORY: 8G
+      MAX_MEMORY: 14G
+      INIT_MEMORY: 5G
       MAX_PLAYERS: 10
       USE_MEOWICE_FLAGS: true
+      ALLOW_FLIGHT: "TRUE"
+      PLAYER_IDLE_TIMEOUT: 300
       DIFFICULTY: hard
     tty: true
     stdin_open: true
