@@ -12,17 +12,17 @@ services:
       CF_SLUG: beyond-depth
       CF_FILE_ID: 6699121
       EULA: TRUE
-      MAX_MEMORY: 14G
-      INIT_MEMORY: 5G
+      MAX_MEMORY: 15G
+      INIT_MEMORY: 8G
       MAX_PLAYERS: 10
-      USE_MEOWICE_FLAGS: true
+      USE_MEOWICE_FLAGS: "true"
       ALLOW_FLIGHT: "TRUE"
       PLAYER_IDLE_TIMEOUT: 300
       DIFFICULTY: hard
     tty: true
     stdin_open: true
     restart: unless-stopped
-    mem_limit: 13g
+    mem_limit: 15g
     volumes:
       - leserveurdemerdela:/data
 
