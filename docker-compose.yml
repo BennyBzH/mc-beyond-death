@@ -23,6 +23,7 @@ services:
     stdin_open: true
     restart: unless-stopped
     mem_limit: 15g
+    cpu_count: 6
     volumes:
       - leserveurdemerdela:/data
 
