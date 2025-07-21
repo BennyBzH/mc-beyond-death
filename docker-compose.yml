@@ -28,15 +28,12 @@ services:
       - leserveurdemerdela:/data
 
   filebrowser:
-    image: filebrowser/filebrowser:latest
+    image: filegator/filegator
     ports:
-      - "8080:80"
+      - "8080:8080"
     volumes:
-      - leserveurdemerdela:/srv
-      - filebrowservols:/config/settings.json
-      - filebrowservols:/database/filebrowser.db #Change to match your directory
-    restart: unless-stopped
+      - leserveurdemerdela:/var/www/filegator/repository
+    restart: always
 
 volumes:
   leserveurdemerdela:
-  filebrowservols:
