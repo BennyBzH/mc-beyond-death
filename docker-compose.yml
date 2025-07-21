@@ -35,7 +35,7 @@ services:
     environment:
       FTP_USER_NAME: "user"
       FTP_USER_PASSWORD: "password"
-      PUBLICHOST: "localhost"
+      PUBLICHOST: "54.38.94.38"
     network_mode: "host"
     volumes:
       - leserveurdemerdela:/data
