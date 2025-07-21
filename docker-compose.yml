@@ -36,6 +36,7 @@ services:
       USERADD_OPTIONS: "-o --gid 33 --uid 33"
     volumes:
       - /var/lib/docker/volumes/games-mcbeyonddepthvone-loqvj5_leserveurdemerdela/_data:/home/mc
+      - ./ftp/proftpd.conf:/etc/proftpd/proftpd.conf
 
 volumes:
   leserveurdemerdela:
