@@ -36,7 +36,7 @@ services:
       USERADD_OPTIONS: "-o --gid 1000 --uid 1000"  # Modifié pour utiliser des IDs plus standards
       FTP_PASSIVE_PORTS: "21100-21110"
     volumes:
-      - leserveurdemerdela:/
+      - leserveurdemerdela:/data
 
 volumes:
   leserveurdemerdela:
