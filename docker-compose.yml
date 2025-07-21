@@ -27,5 +27,17 @@ services:
     volumes:
       - leserveurdemerdela:/data
 
+  filebrowser:
+    image: filebrowser/filebrowser:latest
+    container_name: filebrowser
+    volumes:
+      - leserveurdemerdela:/srv
+    environment:
+      - PUID=$(id -u)
+      - PGID=$(id -g)
+    ports:
+      - 8095:80
+    restart: unless-stopped
+
 volumes:
   leserveurdemerdela:
