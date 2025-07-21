@@ -33,9 +33,10 @@ services:
     restart: always
     environment:
       FTP_LIST: "username:password"
-      USERADD_OPTIONS: "-o --gid 33 --uid 33"
+      USERADD_OPTIONS: "-o --gid 1000 --uid 1000"  # Modifié pour utiliser des IDs plus standards
+      FTP_PASSIVE_PORTS: "21100-21110"
     volumes:
-      - leserveurdemerdela:/data
+      - leserveurdemerdela:/
 
 volumes:
   leserveurdemerdela:
