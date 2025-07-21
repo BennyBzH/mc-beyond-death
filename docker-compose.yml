@@ -33,7 +33,10 @@ services:
       - "8080:80"
     volumes:
       - leserveurdemerdela:/srv
+      - filebrowservols:/config/settings.json
+      - filebrowservols:/database/filebrowser.db #Change to match your directory
     restart: unless-stopped
 
 volumes:
   leserveurdemerdela:
+  filebrowservols:
