@@ -30,14 +30,15 @@ services:
   filebrowser:
     image: filebrowser/filebrowser:latest
     container_name: filebrowser
+    ports:
+      - 8080:80
     volumes:
       - leserveurdemerdela:/srv
+      - ./filebrowser.db:/database/filebrowser.db
+      - ./settings.json:/config/settings.json
     environment:
-      - PUID=$(id -u)
-      - PGID=$(id -g)
-    ports:
-      - 8095:80
-    restart: unless-stopped
+      - PUID=1000
+      - PGID=1000
 
 volumes:
   leserveurdemerdela:
