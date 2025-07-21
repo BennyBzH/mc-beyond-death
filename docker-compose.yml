@@ -27,13 +27,14 @@ services:
     volumes:
       - leserveurdemerdela:/data
 
-  filebrowser:
-    image: filegator/filegator
-    ports:
-      - "8080:8080"
-    volumes:
-      - leserveurdemerdela:/var/www/filegator/repository
+  ftp-container:
+    image: kibatic/proftpd
+    network_mode: host
     restart: always
-
+    environment:
+      FTP_LIST: "username:password"
+      USERADD_OPTIONS: "-o --gid 33 --uid 33"
+    volumes:
+      - leserveurdemerdela:/home/data
 volumes:
   leserveurdemerdela:
