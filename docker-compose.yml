@@ -33,8 +33,12 @@ services:
     restart: always
     environment:
       FTP_LIST: "username:password"
-      USERADD_OPTIONS: "-o --gid 1000 --uid 1000"  # Modifié pour utiliser des IDs plus standards
+      USERADD_OPTIONS: "-o --gid 33 --uid 33"  # Retour aux IDs originaux (www-data)
       FTP_PASSIVE_PORTS: "21100-21110"
+      # Ajout d'une commande d'initialisation pour créer le répertoire et définir les permissions
+      ADDITIONAL_STARTUP_SCRIPT: |
+        chown -R www-data:www-data /data
+        chmod 755 /data
     volumes:
       - leserveurdemerdela:/data
 
