@@ -35,7 +35,7 @@ services:
       FTP_LIST: "username:password"
       USERADD_OPTIONS: "-o --gid 33 --uid 33"
     volumes:
-      - leserveurdemerdela:/data
+      - leserveurdemerdela:/home
       - ./ftp/proftpd.conf:/etc/proftpd/proftpd.conf
 
 volumes:
