@@ -33,16 +33,20 @@ services:
     restart: always
     environment:
       FTP_LIST: "username:password"
-      USERADD_OPTIONS: "-o --gid 33 --uid 33"  # Retour aux IDs originaux (www-data)
+      USERADD_OPTIONS: "-o --gid 1000 --uid 1000"  # Retour aux IDs originaux (www-data)
       FTP_PASSIVE_PORTS: "21100-21110"
       # Ajout d'une commande d'initialisation pour créer le répertoire et définir les permissions
-      ADDITIONAL_STARTUP_SCRIPT: |
-        groupadd -g 33 www-data
-        useradd -u 33 -g 33 www-data
-        chown -R www-data:www-data /data
-        chmod 755 /data
     volumes:
       - leserveurdemerdela:/data
+    user: root  # Ajout important pour avoir les permissions nécessaires
+    command: >
+      sh -c "
+      addgroup --gid 1000 ftpgroup &&
+      adduser --uid 1000 --gid 1000 --home /data --shell /bin/bash --disabled-password username &&
+      chown -R username:ftpgroup /data &&
+      chmod 755 /data &&
+      proftpd --nodaemon"
+
 
 volumes:
   leserveurdemerdela:
