@@ -28,24 +28,17 @@ services:
       - leserveurdemerdela:/data
 
   ftp-container:
-    image: kibatic/proftpd
-    network_mode: host
-    restart: always
+    image: stilliard/pure-ftpd
+    ports:
+      - "21:21"
+      - "30000-30009:30000-30009"
     environment:
-      FTP_LIST: "username:password"
-      USERADD_OPTIONS: "-o --gid 33 --uid 33"  # Retour aux IDs originaux (www-data)
-      FTP_PASSIVE_PORTS: "21100-21110"
-      # Ajout d'une commande d'initialisation pour créer le répertoire et définir les permissions
+      FTP_USER_NAME: "user"
+      FTP_USER_PASSWORD: "password"
+    network_mode: "host"
     volumes:
       - leserveurdemerdela:/data
-    user: root  # Ajout important pour avoir les permissions nécessaires
-    command: >
-      sh -c "
-      addgroup --gid 33 ftpgroup &&
-      adduser --uid 33 --gid 33 --home /data --shell /bin/bash --disabled-password username &&
-      chown -R username:ftpgroup /data &&
-      chmod 755 /data &&
-      proftpd --nodaemon"
+    restart: unless-stopped
 
 
 volumes:
