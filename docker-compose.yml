@@ -37,7 +37,7 @@ services:
       PASSIVE_MIN_PORT: 50000
       PASSIVE_MAX_PORT: 50100
     volumes:
-      - /var/lib/docker/volumes/games-mcbeyonddepthvone-loqvj5_leserveurdemerdela/_data:/home/username
+      - leserveurdemerdela:/home/username
     ports:
       - "21:21"
       - "50000-50100:50000-50100"
