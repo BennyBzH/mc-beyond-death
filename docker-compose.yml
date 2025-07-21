@@ -38,6 +38,7 @@ services:
       PASSIVE_MAX_PORT: 50100
     volumes:
       - leserveurdemerdela:/home/username
+      - ./ftp/proftpd.conf:/etc/proftpd/proftpd.conf
     ports:
       - "21:21"
       - "50000-50100:50000-50100"
