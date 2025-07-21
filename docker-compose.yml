@@ -35,6 +35,7 @@ services:
       FTP_LIST: "username:password"
       USERADD_OPTIONS: "-o --gid 33 --uid 33"
     volumes:
-      - leserveurdemerdela:/home/data
+      - leserveurdemerdela
+
 volumes:
   leserveurdemerdela:
